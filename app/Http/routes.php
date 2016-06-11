@@ -55,6 +55,12 @@ Route::any('/drafts', function() {
 	\Crud::resource( 'orders' );
 	\Crud::resource( 'draft' );
 	\Crud::resource( 'attractions' );
+	\Crud::resource( 'rentals' );
+	\Crud::resource( 'hotels' );
+	\Crud::resource( 'activities' );
+	\Crud::resource( 'activities' );
+	\Crud::resource( 'events' );
+	
 
 });
 

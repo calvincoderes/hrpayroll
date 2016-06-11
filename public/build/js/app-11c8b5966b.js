@@ -28,6 +28,9 @@
 
 		// On click of Link
 		base.data.linkObject.click(function (e) {
+			// If link prevent and img-thumbnail is triggered ( excempt )
+			if ($(this).hasClass('prevent') || $(this).hasClass('img-thumbnail') || $(this).hasClass('close-modal')) return;
+
 			e.preventDefault();
 
 			// Profile User menu

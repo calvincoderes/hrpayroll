@@ -10,24 +10,26 @@
 				<!-- SIDEBAR USER TITLE -->
 				<div class="profile-usertitle">
 					<div class="profile-usertitle-name">
-						Aimon Bio
+						{{ ucfirst(\Auth::user()->firstname) }} {{ ucfirst(\Auth::user()->lastname) }}
 					</div>
 					<div class="profile-usertitle-job">
-						PhD
+						ADMIN
 					</div>
 				</div>
 				<!-- END SIDEBAR USER TITLE -->
 				<!-- SIDEBAR BUTTONS -->
 				<div class="profile-userbuttons">
-					<button type="button" class="btn btn-success btn-sm"><i class="fa fa-user"></i> My Account</button>
-					<button type="button" class="btn btn-danger btn-sm"><i class="fa fa-sign-out"></i> Logout</button>
+				
+					<a href="{{ url('/home') }}" type="button" class="btn btn-success btn-sm"><i class="fa fa-user"></i> My Account</a>
+				
+					<a href="{{ url('/logout') }}" type="button" class="btn btn-danger btn-sm prevent" ><i class="fa fa-sign-out"></i> Logout</a>
 				</div>
 				<!-- END SIDEBAR BUTTONS -->
 				<!-- SIDEBAR MENU -->
 				<div class="profile-usermenu">
 					<ul class="nav">
 						<li class="active">
-							<a href="{{ url('/') }}">
+							<a href="{{ url('/home') }}">
 								<i class="fa fa-home"></i>
 								Dashboard
 							</a>

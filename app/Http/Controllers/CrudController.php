@@ -58,6 +58,8 @@ class CrudController extends Controller {
 	// Constructor
 	public function __construct()
 	{
+		parent::__construct();
+		
 		// Before Construct
 		$this->beforeConstruct();
 
@@ -65,7 +67,7 @@ class CrudController extends Controller {
 		$this->middleware('auth');
 
 		// Get First URL Segment - Treated as base route
-		$base = \String::clean( strtolower( \Request::segment(1) ) );
+		$base = \StringHelper::clean( strtolower( \Request::segment(1) ) );
 
 		// Get Primary Table
 		$this->table = !$this->table ? $base : $this->table;
@@ -90,7 +92,7 @@ class CrudController extends Controller {
 		// $this->image->make(\Config::get('app.uploads') .'placeholder.png', 500, 500, \Config::get('app.uploads') .'placeholder2.png');
 
 		// Get All URL Requests
-		$this->data['query_string'] = \String::getURLQueries( \URL::full() );
+		$this->data['query_string'] = \StringHelper::getURLQueries( \URL::full() );
 
 		// User Group
 		$this->data['user_group_name'] = 'Administrator';
@@ -240,7 +242,7 @@ class CrudController extends Controller {
 
 		}
 
-		$query_srting = \String::getURLQueries( \URL::full() );
+		$query_srting = \StringHelper::getURLQueries( \URL::full() );
 
 		$url = url( $this->table ) . $query_srting;
 
@@ -350,7 +352,7 @@ class CrudController extends Controller {
 
 		}
 
-		$query_srting = \String::getURLQueries( \URL::full() );
+		$query_srting = \StringHelper::getURLQueries( \URL::full() );
 
 		$url = url( $this->table ) . $query_srting;
 
@@ -392,7 +394,7 @@ class CrudController extends Controller {
 		$object->save();
 		$object->delete();
 		$this->afterDestroy( $id );
-		$query_srting = \String::getURLQueries( \URL::full() );
+		$query_srting = \StringHelper::getURLQueries( \URL::full() );
 		$url = url( $this->table ) . $query_srting;
 
 		$success = ucwords( str_replace('_', ' ', $this->table) );

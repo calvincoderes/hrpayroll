@@ -13,13 +13,12 @@ class Controller extends BaseController
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
     
     public $current_user;
-    
-    
+      
     
     public function __construct(){
     	
     	$users = new \App\Models\Users;
-    	
+    	 
     	$this->current_user = $users->where('OAUTH_USER_id', \Auth::user()->id)->first();
     	
     }

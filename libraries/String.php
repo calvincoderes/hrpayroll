@@ -1,6 +1,6 @@
 <?php
 
-class String {
+class StringHelper {
 
 	public static function clean( $string ) {
 	   $string = str_replace(' ', '-', $string); // Replaces all spaces with hyphens.

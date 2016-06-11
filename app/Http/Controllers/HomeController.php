@@ -26,7 +26,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-    	dd($this->current_user);
+    	//dd($this->current_user);
         return view('dashboard');
     }
 }

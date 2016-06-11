@@ -27,8 +27,12 @@
 
 		// On click of Link
     	base.data.linkObject.click(function(e) {
-    		e.preventDefault();
-
+			// If link prevent and img-thumbnail is triggered ( excempt )
+			if( $(this).hasClass('prevent') || $(this).hasClass('img-thumbnail') || $(this).hasClass('close-modal'))
+				return;
+			
+			e.preventDefault();
+			
     		// Profile User menu
     		$('.profile-usermenu li').removeClass('active');
     		$(this).parents('li').addClass('active');
@@ -154,7 +158,7 @@
 
 		base.data.container.find('a').click(function(e) {
 			e.preventDefault();
-
+		
 			// If modal is closed
 			if( $(this).hasClass('close-modal') )
 					history.pushState( null, null, $(this).attr('href') );
