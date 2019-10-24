@@ -19,7 +19,8 @@ class Controller extends BaseController
     	
     	$users = new \App\Models\Users;
     	 
-    	$this->current_user = $users->where('OAUTH_USER_id', \Auth::user()->id)->first();
+        // $this->current_user = $users->where('OAUTH_USER_id', \Auth::user()->id)->first();
+        $this->current_user =1;
     	
     }
 }

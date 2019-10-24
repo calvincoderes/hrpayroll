@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-    	<title>Medical Records</title>
+    	<title>Administrator</title>
     	<base href="{{ url('/') }}" />
 
     	<meta name="csrf-token" id="csrf-token" content="{{ csrf_token() }}">
@@ -32,7 +32,7 @@
 	    <![endif]-->
 
     	<!-- Custom styles for landing page-->
-    	<link rel="stylesheet" type="text/css" href="{{ asset( elixir('css/app.css') ) }}" />
+    	<link rel="stylesheet" type="text/css" href="{{ asset( 'css/app.css' ) }}" />
 
 		<!-- Summernote -->
 		<link href="{{ asset('js/summernote/summernote.css') }}" rel="stylesheet" />

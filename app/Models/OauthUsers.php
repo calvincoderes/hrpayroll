@@ -24,5 +24,5 @@ class OauthUsers extends Authenticatable
         'password', 'remember_token',
     ];
     
-    protected $table = 'oauth_users';
+    protected $table = 'users';
 }

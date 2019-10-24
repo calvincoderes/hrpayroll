@@ -6,15 +6,13 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 
 class User extends Authenticatable
 {
-	protected $table = 'oauth_users';
+	protected $table = 'users';
     /**
      * The attributes that are mass assignable.
      *
      * @var array
      */
-    protected $fillable = [
-        'firstname', 'lastname', 'email', 'password',
-    ];
+    protected $fillable = ['*'];
 
     /**
      * The attributes excluded from the model's JSON form.

@@ -8,7 +8,7 @@ var generateView = function( resource ) {
 
 	a.forEach(function(row) {
 		var content = fs.readFileSync('resources/views/reference/crud-' + row + '.blade.php', 'utf8');
-		createFile('resources/views/crud/' + resource + '-' + row + '.blade.php', content);
+		createFile('resources/views/crud/' + resource + '/' + row + '.blade.php', content);
 	});
 
 }

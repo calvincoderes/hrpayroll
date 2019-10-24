@@ -28,7 +28,7 @@ class CrudController extends Controller {
 	// Variables to be rendered on views
 	public $data = [];
 
-	// Error Container
+	// Error Container,c  
 	public $error = [];
 
 	// Pagination Limit
@@ -71,10 +71,9 @@ class CrudController extends Controller {
 
 		// Get Primary Table
 		$this->table = !$this->table ? $base : $this->table;
-
 		// Initialize Model
 		$this->model = app( '\App\Models\\' . studly_case($this->table) );
-
+		
 		// Get Table Columns
 		$this->columns = \Schema::getColumnListing( $this->model['table'] );
 
@@ -150,10 +149,13 @@ class CrudController extends Controller {
 		// Function to call if there are changes in Lists
 		$this->model = $this->setListData( \Request::all() );
 
+		// dd($this->model);
+		// dd(\App\Models\EmployeeManagement::where());
 		// Get Results
 		if( $this->limit > 0 )
 			$this->data['results'] = $this->model->paginate( $this->limit );
 		else
+		
 			$this->data['results'] = $this->model->get();
 
 		// Add data

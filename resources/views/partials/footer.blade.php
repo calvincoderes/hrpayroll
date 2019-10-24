@@ -1,4 +1,5 @@
 
+
 	<!-- Image Modal Placeholder-->
 	<div class="modal fade" id="crud-content" tabindex="-1" role="dialog" aria-labelledby="Modal" aria-hidden="true">
 	  <div class="modal-dialog">
@@ -6,7 +7,7 @@
 	      <div class="modal-body">
 	      	<?php /*
 	      	<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-			*/ ?>
+					*/ ?>
 			
 	      </div>
 	    </div>
@@ -52,10 +53,10 @@
 	<script src="{{ asset('css/bootstrap/bootstrap.min.js') }}"></script>
     
 	<!-- App Scripts -->
-	<script src="{{ \Asset::cdn('js/select2/js/select2.min.js') }}" type="text/javascript"></script>
+	<script src="{{ asset('js/select2/js/select2.min.js') }}" type="text/javascript"></script>
 
     <!-- App Scripts -->
-	<script src="{{ asset( elixir('js/app.js') ) }}" type="text/javascript"></script>
+	<script src="{{ asset('js/app.js') }}" type="text/javascript"></script>
 
 	<!-- Custom Scripts -->
 	@yield('scripts')

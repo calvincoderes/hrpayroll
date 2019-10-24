@@ -1,16 +1,19 @@
-<div class="container">
+<div class="container-fluid">
     <div class="row profile">
-		<div class="col-md-3">
+		<div class="col-md-3 nopadding">
 			<div class="profile-sidebar">
 				<!-- SIDEBAR USERPIC -->
 				<div class="profile-userpic">
-					<img src="{{ asset(url('img/logo.jpg')) }}" class="img-responsive" alt="">
+					{{--  --}}
 				</div>
 				<!-- END SIDEBAR USERPIC -->
 				<!-- SIDEBAR USER TITLE -->
+				<div class="company-logo">
+					<img src="{{ asset('img/logo.png') }}" class="img-fluid" alt="Responsive image" style="height: 130px">
+				</div>
 				<div class="profile-usertitle">
 					<div class="profile-usertitle-name">
-						{{ ucfirst(\Auth::user()->firstname) }} {{ ucfirst(\Auth::user()->lastname) }}
+						John Doe
 					</div>
 					<div class="profile-usertitle-job">
 						ADMIN
@@ -35,31 +38,41 @@
 							</a>
 						</li>
 						<li>
-							<a href="{{ url('products') }}">
+							<a href="{{ url('employee-management') }}">
 								<i class="fa fa-users"></i>
-								Patients Record
+								Employee Management
 							</a>
 						</li>
 						<li>
-							<a href="{{ url('categories') }}" target="_blank">
+							<a href="{{ url('shift-management') }}" target="_blank">
 								<i class="fa fa-plus-square"></i>
-								Drug Records
+								Shift Management
 							</a>
 						</li>
 						<li>
-							<a href="{{ url('vendors') }}">
+							<a href="{{ url('company-management') }}">
 								<i class="fa fa-gear"></i>
-								Settings
+								Company Management
 							</a>
 						</li>
             <li>
-							<a href="{{ url('draft') }}">
-								<i class="fa fa-gear"></i>
-								Drafts
+							<a href="{{ url('holiday-management') }}">
+								<i class="fa fa-calendar"></i>
+								Holidays Management
 							</a>
 						</li>
 						<li>
-							<a href="{{ url('sizes') }}">
+							<a href="{{ url('timekeeping') }}">
+							<i class="fa fa-clock-o"></i>
+							Time-Keeping </a>
+						</li>
+						<li>
+							<a href="{{ url('reports') }}">
+							<i class="fa fa-bar-chart"></i>
+							Reports </a>
+						</li>
+						<li>
+							<a href="{{ url('reports') }}">
 							<i class="fa fa-bar-chart"></i>
 							Reports </a>
 						</li>
@@ -68,10 +81,13 @@
 				<!-- END MENU -->
 			</div>
 		</div>
+		<div class="col-md-9 top-bar">
+				<h4 class="text-right">Hello Admin</h4>
+		</div>
 		<div class="col-md-9 crud-content">
-            <div class="profile-content">
-            	<h1><i class="fa fa-refresh fa-spin fa-3x fa-fw margin-bottom"></i></h1>
-            </div>
+				<div class="profile-content">
+					<h1><i class="fa fa-refresh fa-spin fa-3x fa-fw margin-bottom"></i></h1>
+				</div>
 		</div>
 	</div>
 </div>
